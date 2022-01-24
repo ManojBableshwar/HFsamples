@@ -1,0 +1,12 @@
+name: hf
+channels:
+  - defaults
+dependencies:
+  - python=3.8.12
+  - pip:
+    - torch
+    - sklearn
+    - tensorflow
+    - transformers
+    - datasets
+    - numpy

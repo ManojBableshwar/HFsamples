@@ -1,0 +1,385 @@
+manoj@surface$ conda create -n hf python=3.8
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.10.3
+  latest version: 4.11.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /root/miniconda3/envs/hf
+
+  added / updated specs:
+    - python=3.8
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2021.10.26 |       h06a4308_2         115 KB
+    certifi-2021.10.8          |   py38h06a4308_2         152 KB
+    ncurses-6.3                |       h7f8727e_2         782 KB
+    openssl-1.1.1m             |       h7f8727e_0         2.5 MB
+    pip-21.2.4                 |   py38h06a4308_0         1.8 MB
+    python-3.8.12              |       h12debd9_0        18.3 MB
+    readline-8.1.2             |       h7f8727e_1         354 KB
+    setuptools-58.0.4          |   py38h06a4308_0         790 KB
+    sqlite-3.37.0              |       hc218d9a_0         999 KB
+    tk-8.6.11                  |       h1ccaba5_0         3.0 MB
+    wheel-0.37.1               |     pyhd3eb1b0_0          33 KB
+    zlib-1.2.11                |       h7f8727e_4         108 KB
+    ------------------------------------------------------------
+                                           Total:        28.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-4.5-1_gnu
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2021.10.26-h06a4308_2
+  certifi            pkgs/main/linux-64::certifi-2021.10.8-py38h06a4308_2
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.35.1-h7274673_9
+  libffi             pkgs/main/linux-64::libffi-3.3-he6710b0_2
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-9.3.0-h5101ec6_17
+  libgomp            pkgs/main/linux-64::libgomp-9.3.0-h5101ec6_17
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-9.3.0-hd4cf53a_17
+  ncurses            pkgs/main/linux-64::ncurses-6.3-h7f8727e_2
+  openssl            pkgs/main/linux-64::openssl-1.1.1m-h7f8727e_0
+  pip                pkgs/main/linux-64::pip-21.2.4-py38h06a4308_0
+  python             pkgs/main/linux-64::python-3.8.12-h12debd9_0
+  readline           pkgs/main/linux-64::readline-8.1.2-h7f8727e_1
+  setuptools         pkgs/main/linux-64::setuptools-58.0.4-py38h06a4308_0
+  sqlite             pkgs/main/linux-64::sqlite-3.37.0-hc218d9a_0
+  tk                 pkgs/main/linux-64::tk-8.6.11-h1ccaba5_0
+  wheel              pkgs/main/noarch::wheel-0.37.1-pyhd3eb1b0_0
+  xz                 pkgs/main/linux-64::xz-5.2.5-h7b6447c_0
+  zlib               pkgs/main/linux-64::zlib-1.2.11-h7f8727e_4
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+openssl-1.1.1m       | 2.5 MB    | ################################################ | 100% 
+ca-certificates-2021 | 115 KB    | ################################################ | 100% 
+zlib-1.2.11          | 108 KB    | ################################################ | 100% 
+setuptools-58.0.4    | 790 KB    | ################################################ | 100% 
+certifi-2021.10.8    | 152 KB    | ################################################ | 100% 
+python-3.8.12        | 18.3 MB   | ################################################ | 100% 
+sqlite-3.37.0        | 999 KB    | ################################################ | 100% 
+tk-8.6.11            | 3.0 MB    | ################################################ | 100% 
+ncurses-6.3          | 782 KB    | ################################################ | 100% 
+readline-8.1.2       | 354 KB    | ################################################ | 100% 
+wheel-0.37.1         | 33 KB     | ################################################ | 100% 
+pip-21.2.4           | 1.8 MB    | ################################################ | 100% 
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate hf
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+manoj@surface$ conda activate hf
+(hf) root@mabablessurface:/mnt/c/CODE/repos/HFsamples# pip install torch
+Collecting torch
+  Downloading torch-1.10.1-cp38-cp38-manylinux1_x86_64.whl (881.9 MB)
+     |████████████████████████████████| 881.9 MB 15 kB/s 
+Collecting typing-extensions
+  Downloading typing_extensions-4.0.1-py3-none-any.whl (22 kB)
+Installing collected packages: typing-extensions, torch
+Successfully installed torch-1.10.1 typing-extensions-4.0.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+(hf) root@mabablessurface:/mnt/c/CODE/repos/HFsamples# pip install --upgrade tensorflow
+Collecting tensorflow
+  Downloading tensorflow-2.7.0-cp38-cp38-manylinux2010_x86_64.whl (489.6 MB)
+     |████████████████████████████████| 489.6 MB 43 kB/s 
+Requirement already satisfied: typing-extensions>=3.6.6 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from tensorflow) (4.0.1)
+Collecting keras-preprocessing>=1.1.1
+  Downloading Keras_Preprocessing-1.1.2-py2.py3-none-any.whl (42 kB)
+     |████████████████████████████████| 42 kB 719 kB/s 
+Collecting google-pasta>=0.1.1
+  Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+     |████████████████████████████████| 57 kB 3.5 MB/s 
+Collecting h5py>=2.9.0
+  Downloading h5py-3.6.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (4.5 MB)
+     |████████████████████████████████| 4.5 MB 38.7 MB/s 
+Requirement already satisfied: wheel<1.0,>=0.32.0 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from tensorflow) (0.37.1)
+Collecting absl-py>=0.4.0
+  Downloading absl_py-1.0.0-py3-none-any.whl (126 kB)
+     |████████████████████████████████| 126 kB 38.3 MB/s 
+Collecting keras<2.8,>=2.7.0rc0
+  Downloading keras-2.7.0-py2.py3-none-any.whl (1.3 MB)
+     |████████████████████████████████| 1.3 MB 3.8 MB/s 
+Collecting libclang>=9.0.1
+  Downloading libclang-12.0.0-2-py2.py3-none-manylinux1_x86_64.whl (13.3 MB)
+     |████████████████████████████████| 13.3 MB 14.3 MB/s 
+Collecting astunparse>=1.6.0
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting six>=1.12.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting gast<0.5.0,>=0.2.1
+  Downloading gast-0.4.0-py3-none-any.whl (9.8 kB)
+Collecting flatbuffers<3.0,>=1.12
+  Downloading flatbuffers-2.0-py2.py3-none-any.whl (26 kB)
+Collecting termcolor>=1.1.0
+  Downloading termcolor-1.1.0.tar.gz (3.9 kB)
+Collecting wrapt>=1.11.0
+  Downloading wrapt-1.13.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (84 kB)
+     |████████████████████████████████| 84 kB 2.0 MB/s 
+Collecting numpy>=1.14.5
+  Downloading numpy-1.22.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     |████████████████████████████████| 16.8 MB 33.3 MB/s 
+Collecting tensorflow-estimator<2.8,~=2.7.0rc0
+  Downloading tensorflow_estimator-2.7.0-py2.py3-none-any.whl (463 kB)
+     |████████████████████████████████| 463 kB 6.4 MB/s 
+Collecting tensorboard~=2.6
+  Downloading tensorboard-2.8.0-py3-none-any.whl (5.8 MB)
+     |████████████████████████████████| 5.8 MB 8.2 MB/s 
+Collecting opt-einsum>=2.3.2
+  Downloading opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+     |████████████████████████████████| 65 kB 3.0 MB/s 
+Collecting grpcio<2.0,>=1.24.3
+  Downloading grpcio-1.43.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.1 MB)
+     |████████████████████████████████| 4.1 MB 16.9 MB/s 
+Collecting protobuf>=3.9.2
+  Downloading protobuf-3.19.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 37.0 MB/s 
+Collecting tensorflow-io-gcs-filesystem>=0.21.0
+  Downloading tensorflow_io_gcs_filesystem-0.23.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (2.1 MB)
+     |████████████████████████████████| 2.1 MB 26.7 MB/s 
+Collecting tensorboard-data-server<0.7.0,>=0.6.0
+  Downloading tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+     |████████████████████████████████| 4.9 MB 9.4 MB/s 
+Collecting werkzeug>=0.11.15
+  Downloading Werkzeug-2.0.2-py3-none-any.whl (288 kB)
+     |████████████████████████████████| 288 kB 24.1 MB/s 
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Downloading google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting markdown>=2.6.8
+  Downloading Markdown-3.3.6-py3-none-any.whl (97 kB)
+     |████████████████████████████████| 97 kB 4.1 MB/s 
+Collecting google-auth<3,>=1.6.3
+  Downloading google_auth-2.3.3-py2.py3-none-any.whl (155 kB)
+     |████████████████████████████████| 155 kB 23.5 MB/s 
+Collecting tensorboard-plugin-wit>=1.6.0
+  Downloading tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+     |████████████████████████████████| 781 kB 36.8 MB/s 
+Requirement already satisfied: setuptools>=41.0.0 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from tensorboard~=2.6->tensorflow) (58.0.4)
+Collecting requests<3,>=2.21.0
+  Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
+     |████████████████████████████████| 63 kB 967 kB/s 
+Collecting cachetools<5.0,>=2.0.0
+  Downloading cachetools-4.2.4-py3-none-any.whl (10 kB)
+Collecting pyasn1-modules>=0.2.1
+  Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+     |████████████████████████████████| 155 kB 23.3 MB/s 
+Collecting rsa<5,>=3.1.4
+  Downloading rsa-4.8-py3-none-any.whl (39 kB)
+Collecting requests-oauthlib>=0.7.0
+  Downloading requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)
+Collecting importlib-metadata>=4.4
+  Downloading importlib_metadata-4.10.1-py3-none-any.whl (17 kB)
+Collecting zipp>=0.5
+  Downloading zipp-3.7.0-py3-none-any.whl (5.3 kB)
+Collecting pyasn1<0.5.0,>=0.4.6
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+     |████████████████████████████████| 77 kB 2.0 MB/s 
+Collecting idna<4,>=2.5
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     |████████████████████████████████| 61 kB 5.4 MB/s 
+Collecting charset-normalizer~=2.0.0
+  Downloading charset_normalizer-2.0.10-py3-none-any.whl (39 kB)
+Requirement already satisfied: certifi>=2017.4.17 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard~=2.6->tensorflow) (2021.10.8)
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.8-py2.py3-none-any.whl (138 kB)
+     |████████████████████████████████| 138 kB 30.6 MB/s 
+Collecting oauthlib>=3.0.0
+  Downloading oauthlib-3.1.1-py2.py3-none-any.whl (146 kB)
+     |████████████████████████████████| 146 kB 32.4 MB/s 
+Building wheels for collected packages: termcolor
+  Building wheel for termcolor (setup.py) ... done
+  Created wheel for termcolor: filename=termcolor-1.1.0-py3-none-any.whl size=4848 sha256=d724549af9ab015fb77bfcb0469944f6dfab32bccb5e3fab9df535a838322ca9
+  Stored in directory: /root/.cache/pip/wheels/a0/16/9c/5473df82468f958445479c59e784896fa24f4a5fc024b0f501
+Successfully built termcolor
+Installing collected packages: urllib3, pyasn1, idna, charset-normalizer, zipp, six, rsa, requests, pyasn1-modules, oauthlib, cachetools, requests-oauthlib, importlib-metadata, google-auth, werkzeug, tensorboard-plugin-wit, tensorboard-data-server, protobuf, numpy, markdown, grpcio, google-auth-oauthlib, absl-py, wrapt, termcolor, tensorflow-io-gcs-filesystem, tensorflow-estimator, tensorboard, opt-einsum, libclang, keras-preprocessing, keras, h5py, google-pasta, gast, flatbuffers, astunparse, tensorflow
+Successfully installed absl-py-1.0.0 astunparse-1.6.3 cachetools-4.2.4 charset-normalizer-2.0.10 flatbuffers-2.0 gast-0.4.0 google-auth-2.3.3 google-auth-oauthlib-0.4.6 google-pasta-0.2.0 grpcio-1.43.0 h5py-3.6.0 idna-3.3 importlib-metadata-4.10.1 keras-2.7.0 keras-preprocessing-1.1.2 libclang-12.0.0 markdown-3.3.6 numpy-1.22.1 oauthlib-3.1.1 opt-einsum-3.3.0 protobuf-3.19.3 pyasn1-0.4.8 pyasn1-modules-0.2.8 requests-2.27.1 requests-oauthlib-1.3.0 rsa-4.8 six-1.16.0 tensorboard-2.8.0 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-2.7.0 tensorflow-estimator-2.7.0 tensorflow-io-gcs-filesystem-0.23.1 termcolor-1.1.0 urllib3-1.26.8 werkzeug-2.0.2 wrapt-1.13.3 zipp-3.7.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+(hf) root@mabablessurface:/mnt/c/CODE/repos/HFsamples# pip install transformers
+Collecting transformers
+  Downloading transformers-4.15.0-py3-none-any.whl (3.4 MB)
+     |████████████████████████████████| 3.4 MB 2.7 MB/s 
+Collecting sacremoses
+  Downloading sacremoses-0.0.47-py2.py3-none-any.whl (895 kB)
+     |████████████████████████████████| 895 kB 23.7 MB/s 
+Collecting packaging>=20.0
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 4.5 MB/s 
+Requirement already satisfied: requests in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from transformers) (2.27.1)
+Requirement already satisfied: numpy>=1.17 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from transformers) (1.22.1)
+Collecting regex!=2019.12.17
+  Downloading regex-2022.1.18-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (764 kB)
+     |████████████████████████████████| 764 kB 19.5 MB/s 
+Collecting filelock
+  Downloading filelock-3.4.2-py3-none-any.whl (9.9 kB)
+Collecting tqdm>=4.27
+  Downloading tqdm-4.62.3-py2.py3-none-any.whl (76 kB)
+     |████████████████████████████████| 76 kB 2.4 MB/s 
+Collecting tokenizers<0.11,>=0.10.1
+  Downloading tokenizers-0.10.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (3.3 MB)
+     |████████████████████████████████| 3.3 MB 17.6 MB/s 
+Collecting pyyaml>=5.1
+  Downloading PyYAML-6.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (701 kB)
+     |████████████████████████████████| 701 kB 18.7 MB/s 
+Collecting huggingface-hub<1.0,>=0.1.0
+  Downloading huggingface_hub-0.4.0-py3-none-any.whl (67 kB)
+     |████████████████████████████████| 67 kB 3.5 MB/s 
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from huggingface-hub<1.0,>=0.1.0->transformers) (4.0.1)
+Collecting pyparsing!=3.0.5,>=2.0.2
+  Downloading pyparsing-3.0.7-py3-none-any.whl (98 kB)
+     |████████████████████████████████| 98 kB 5.3 MB/s 
+Requirement already satisfied: certifi>=2017.4.17 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests->transformers) (2021.10.8)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests->transformers) (2.0.10)
+Requirement already satisfied: idna<4,>=2.5 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests->transformers) (3.3)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests->transformers) (1.26.8)
+Collecting click
+  Downloading click-8.0.3-py3-none-any.whl (97 kB)
+     |████████████████████████████████| 97 kB 4.9 MB/s 
+Requirement already satisfied: six in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from sacremoses->transformers) (1.16.0)
+Collecting joblib
+  Downloading joblib-1.1.0-py2.py3-none-any.whl (306 kB)
+     |████████████████████████████████| 306 kB 29.4 MB/s 
+Installing collected packages: pyparsing, tqdm, regex, pyyaml, packaging, joblib, filelock, click, tokenizers, sacremoses, huggingface-hub, transformers
+Successfully installed click-8.0.3 filelock-3.4.2 huggingface-hub-0.4.0 joblib-1.1.0 packaging-21.3 pyparsing-3.0.7 pyyaml-6.0 regex-2022.1.18 sacremoses-0.0.47 tokenizers-0.10.3 tqdm-4.62.3 transformers-4.15.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+(hf) root@mabablessurface:/mnt/c/CODE/repos/HFsamples# python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+2022-01-23 08:47:31.467611: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-01-23 08:47:31.468571: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+No model was supplied, defaulted to distilbert-base-uncased-finetuned-sst-2-english (https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english)
+Downloading: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 629/629 [00:00<00:00, 250kB/s]
+Downloading: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 255M/255M [00:08<00:00, 30.2MB/s]
+Downloading: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 48.0/48.0 [00:00<00:00, 16.7kB/s]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/miniconda3/envs/hf/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 592, in pipeline
+    tokenizer = AutoTokenizer.from_pretrained(
+  File "/root/miniconda3/envs/hf/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 550, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/root/miniconda3/envs/hf/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1654, in from_pretrained
+    fast_tokenizer_file = get_fast_tokenizer_file(
+  File "/root/miniconda3/envs/hf/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 3486, in get_fast_tokenizer_file
+    all_files = get_list_of_files(
+  File "/root/miniconda3/envs/hf/lib/python3.8/site-packages/transformers/file_utils.py", line 2103, in get_list_of_files
+    return list_repo_files(path_or_repo, revision=revision, token=token)
+  File "/root/miniconda3/envs/hf/lib/python3.8/site-packages/huggingface_hub/hf_api.py", line 884, in list_repo_files
+    info = self.model_info(
+  File "/root/miniconda3/envs/hf/lib/python3.8/site-packages/huggingface_hub/hf_api.py", line 868, in model_info
+    r.raise_for_status()
+  File "/root/miniconda3/envs/hf/lib/python3.8/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/models/distilbert-base-uncased-finetuned-sst-2-english
+(hf) root@mabablessurface:/mnt/c/CODE/repos/HFsamples# python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+2022-01-23 08:49:20.345467: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-01-23 08:49:20.345541: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+No model was supplied, defaulted to distilbert-base-uncased-finetuned-sst-2-english (https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english)
+Downloading: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 226k/226k [00:00<00:00, 1.83MB/s]
+[{'label': 'POSITIVE', 'score': 0.9998704195022583}]
+(hf) root@mabablessurface:/mnt/c/CODE/repos/HFsamples# pip install datasets
+Collecting datasets
+  Downloading datasets-1.18.0-py3-none-any.whl (311 kB)
+     |████████████████████████████████| 311 kB 2.3 MB/s 
+Collecting xxhash
+  Downloading xxhash-2.0.2-cp38-cp38-manylinux2010_x86_64.whl (243 kB)
+     |████████████████████████████████| 243 kB 7.9 MB/s 
+Requirement already satisfied: tqdm>=4.62.1 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from datasets) (4.62.3)
+Collecting fsspec[http]>=2021.05.0
+  Downloading fsspec-2022.1.0-py3-none-any.whl (133 kB)
+     |████████████████████████████████| 133 kB 11.5 MB/s 
+Collecting pyarrow!=4.0.0,>=3.0.0
+  Downloading pyarrow-6.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25.6 MB)
+     |████████████████████████████████| 25.6 MB 10.5 MB/s 
+Collecting pandas
+  Downloading pandas-1.4.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.7 MB)
+     |████████████████████████████████| 11.7 MB 32.2 MB/s 
+Collecting multiprocess
+  Downloading multiprocess-0.70.12.2-py38-none-any.whl (128 kB)
+     |████████████████████████████████| 128 kB 8.3 MB/s 
+Collecting dill
+  Downloading dill-0.3.4-py2.py3-none-any.whl (86 kB)
+     |████████████████████████████████| 86 kB 4.5 MB/s 
+Requirement already satisfied: packaging in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from datasets) (21.3)
+Requirement already satisfied: huggingface-hub<1.0.0,>=0.1.0 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from datasets) (0.4.0)
+Requirement already satisfied: requests>=2.19.0 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from datasets) (2.27.1)
+Collecting aiohttp
+  Downloading aiohttp-3.8.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.3 MB)
+     |████████████████████████████████| 1.3 MB 13.7 MB/s 
+Requirement already satisfied: numpy>=1.17 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from datasets) (1.22.1)
+Requirement already satisfied: filelock in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from huggingface-hub<1.0.0,>=0.1.0->datasets) (3.4.2)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from huggingface-hub<1.0.0,>=0.1.0->datasets) (4.0.1)
+Requirement already satisfied: pyyaml in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from huggingface-hub<1.0.0,>=0.1.0->datasets) (6.0)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from packaging->datasets) (3.0.7)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests>=2.19.0->datasets) (2.0.10)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests>=2.19.0->datasets) (1.26.8)
+Requirement already satisfied: certifi>=2017.4.17 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests>=2.19.0->datasets) (2021.10.8)
+Requirement already satisfied: idna<4,>=2.5 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from requests>=2.19.0->datasets) (3.3)
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.3.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (158 kB)
+     |████████████████████████████████| 158 kB 38.2 MB/s 
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (121 kB)
+     |████████████████████████████████| 121 kB 25.4 MB/s 
+Collecting async-timeout<5.0,>=4.0.0a3
+  Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.2.0-py3-none-any.whl (8.2 kB)
+Collecting attrs>=17.3.0
+  Downloading attrs-21.4.0-py2.py3-none-any.whl (60 kB)
+     |████████████████████████████████| 60 kB 7.3 MB/s 
+Collecting yarl<2.0,>=1.0
+  Downloading yarl-1.7.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (308 kB)
+     |████████████████████████████████| 308 kB 21.8 MB/s 
+Collecting python-dateutil>=2.8.1
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     |████████████████████████████████| 247 kB 20.6 MB/s 
+Collecting pytz>=2020.1
+  Downloading pytz-2021.3-py2.py3-none-any.whl (503 kB)
+     |████████████████████████████████| 503 kB 23.7 MB/s 
+Requirement already satisfied: six>=1.5 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from python-dateutil>=2.8.1->pandas->datasets) (1.16.0)
+Installing collected packages: multidict, frozenlist, yarl, attrs, async-timeout, aiosignal, pytz, python-dateutil, fsspec, dill, aiohttp, xxhash, pyarrow, pandas, multiprocess, datasets
+Successfully installed aiohttp-3.8.1 aiosignal-1.2.0 async-timeout-4.0.2 attrs-21.4.0 datasets-1.18.0 dill-0.3.4 frozenlist-1.3.0 fsspec-2022.1.0 multidict-6.0.1 multiprocess-0.70.12.2 pandas-1.4.0 pyarrow-6.0.1 python-dateutil-2.8.2 pytz-2021.3 xxhash-2.0.2 yarl-1.7.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+(hf) root@mabablessurface:/mnt/c/CODE/repos/HFsamples# pip install sklearn
+Collecting sklearn
+  Downloading sklearn-0.0.tar.gz (1.1 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-1.0.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.7 MB)
+     |████████████████████████████████| 26.7 MB 187 kB/s 
+Requirement already satisfied: numpy>=1.14.6 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from scikit-learn->sklearn) (1.22.1)
+Collecting scipy>=1.1.0
+  Downloading scipy-1.7.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (39.3 MB)
+     |████████████████████████████████| 39.3 MB 151 kB/s 
+Collecting threadpoolctl>=2.0.0
+  Downloading threadpoolctl-3.0.0-py3-none-any.whl (14 kB)
+Requirement already satisfied: joblib>=0.11 in /root/miniconda3/envs/hf/lib/python3.8/site-packages (from scikit-learn->sklearn) (1.1.0)
+Building wheels for collected packages: sklearn
+  Building wheel for sklearn (setup.py) ... done
+  Created wheel for sklearn: filename=sklearn-0.0-py2.py3-none-any.whl size=1310 sha256=2686a51517d64d81f2ce1193a4567e11909431bd8a0f69b80ca75a64190f3ff9
+  Stored in directory: /root/.cache/pip/wheels/22/0b/40/fd3f795caaa1fb4c6cb738bc1f56100be1e57da95849bfc897
+Successfully built sklearn
+Installing collected packages: threadpoolctl, scipy, scikit-learn, sklearn
+Successfully installed scikit-learn-1.0.2 scipy-1.7.3 sklearn-0.0 threadpoolctl-3.0.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+(hf) root@mabablessurface:/mnt/c/CODE/repos/HFsamples# conda env export > environment.yaml
+

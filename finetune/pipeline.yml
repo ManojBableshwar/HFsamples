@@ -1,0 +1,16 @@
+type: pipeline
+jobs:
+  fine-tune:
+    type: command
+    outputs:
+      finetuned_model:
+        mode: mount
+    compute: azureml:gpu-cluster
+    environment: 
+      conda_file: ./environment.yml
+      image: continuumio/miniconda3
+    code: 
+      local_path: ./
+    command: >-
+      python fine-tune.py 
+      --output ${{outputs.finetuned_model}}
